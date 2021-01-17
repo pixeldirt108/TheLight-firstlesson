@@ -9,7 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var isLightOn: Bool = false
+    var isLightOn = true
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +26,7 @@ class ViewController: UIViewController {
 //        } else {
 //            view.backgroundColor = .black
 //        }
-//       We moved upper preferences into ?:
+//       We moved upper preferences into ?: to write less code
         view.backgroundColor = isLightOn ? .white : .black
     }
     
